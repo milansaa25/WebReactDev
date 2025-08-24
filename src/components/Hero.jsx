@@ -39,25 +39,25 @@ const Hero = () => {
 
         {/* Right Section - Contact Form */}
         <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
-          <h2 className="text-2xl font-bold mb-2">Get a Custom Quote</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-2xl font-bold mb-2 flex justify-center ">Get a Custom Quote</h2>
+          <p className="text-gray-600 mb-6 flex">
             Please complete the requested fields and we'll be in touch within one business day to discuss options and pricing.
           </p>
           <form className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
+              <label htmlFor="name" className="block text-sm font-medium text-black">Name *</label>
               <input type="text" id="name" placeholder="Enter your full name" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+              <label htmlFor="email" className="block text-sm font-medium text-black">Email *</label>
               <input type="email" id="email" placeholder="Enter your email address" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number *</label>
+              <label htmlFor="phone" className="block text-sm font-medium text-black">Phone Number *</label>
               <input type="tel" id="phone" placeholder="Enter your phone number" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
+              <label htmlFor="message" className="block text-sm font-medium text-black">Message *</label>
               <textarea id="message" rows="4" placeholder="Tell us about your project requirements..." className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
             </div>
             <button type="submit" className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center justify-center">
