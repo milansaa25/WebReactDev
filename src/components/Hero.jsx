@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGoogle, FaStar, FaArrowRight } from 'react-icons/fa';
+import { FcGoogle, FaStar, FaArrowRight } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex items-center space-x-2 mt-4">
-            <FaGoogle className="text-4xl" />
+            <FcGoogle className="text-4xl" />
             <div className="flex text-yellow-400">
               <FaStar /><FaStar /><FaStar /><FaStar /><FaStar className="text-yellow-200" />
             </div>
