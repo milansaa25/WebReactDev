@@ -19,7 +19,7 @@ const Footer = () => (
         </p>
         <div className="flex items-center mt-8">
           <img
-            src="src/assets/image/logo-1.svg"
+            src="/reactIcon.svg"
             alt="React Logo"
             className="h-10 w-10 mr-3"
           />
