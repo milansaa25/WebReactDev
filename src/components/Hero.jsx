@@ -1,108 +1,73 @@
-import React from "react";
-import { FaPhoneAlt, FaLongArrowAltRight } from "react-icons/fa";
+import React from 'react';
+import { FaGoogle, FaStar, FaArrowRight } from 'react-icons/fa';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        {/* Left Content */}
-        <div className="space-y-4">
-          <span className="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
-            Top 3% Vetted Laravel Experts
+    <section className="bg-gray-50 py-20 mt-16">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left Section - Hero Content */}
+        <div className="space-y-6">
+          <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full inline-flex items-center animate-pulse-slow">
+            <FaStar className="w-3 h-3 mr-1 text-yellow-400" />
+            Top 2% Vetted Laravel Experts.
           </span>
-
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Hire Dedicated{" "}
-            <span className="text-blue-600">React JS Developers</span> Through
-            WPD
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+            Hire Dedicated <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">React JS</span>
+            <br />
+            Developers Through <br />
+            <span className="animate-fade-in-down">WPD</span>
           </h1>
-
-          <p className="text-gray-600">
-            Transform your web initiatives with elite, security-cleared
-            engineers delivering bulletproof, scalable, and high-performance web
-            solutions tailored to your business needs.
+          <p className="text-gray-600 text-lg">
+            Transform your web initiatives with elite, security-cleared engineers delivering bulletproof, scalable, and high-performance web solutions tailored to your business needs.
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold shadow hover:bg-blue-700 transition">
-              START 7-DAYS TRIAL
+          <div className="flex items-center space-x-4">
+            <button className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center">
+              START 7-DAYS TRAIL <FaArrowRight className="ml-2" />
             </button>
-            <div className="flex items-center gap-1 text-gray-700 px-1 py-1 border-1 border-solid rounded-lg outline outline-offset-1">
-              <FaPhoneAlt className="text-blue-600" />
-              <span className="font-semibold">+1 315 215 2005</span>
-            </div>
+            <a href="tel:+13152152005" className="text-gray-700 font-semibold flex items-center">
+              <span className="text-xl border-2 border-blue-600 border-solid p-2 rounded-md">+1 315 215 2005</span>
+            </a>
           </div>
-
-          {/* Reviews */}
-          <div className="flex items-center gap-3 text-gray-600 mb-4">
-            <img
-              src="src/assets/image/google-2.svg"
-              alt="Google"
-              className="h-6"
-            />
-            <span className="text-black font-semibold py-3">4.8</span>
-            <span className="font-semibold text-yellow-500"> ★★★★★</span>
-            <span className="font-semibold">500+ Google Reviews</span>
+          <div className="flex items-center space-x-2 mt-4">
+            <FaGoogle className="text-4xl" />
+            <div className="flex text-yellow-400">
+              <FaStar /><FaStar /><FaStar /><FaStar /><FaStar className="text-yellow-200" />
+            </div>
+            <p className="text-gray-600">500+ Google Reviews</p>
           </div>
         </div>
 
-        {/* Form  */}
-        <div className="bg-gray-50 p-8 rounded-xl shadow-md text-center max-w-md mx-auto">
-          <h3 className="text-xl font-semibold mb-2">Get a Custom Quote</h3>
-          <p className="text-gray-600 mb-3 text-sm">
-            Please complete the requested fields and we'll be in touch within
-            one business day.
+        {/* Right Section - Contact Form */}
+        <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-200">
+          <h2 className="text-2xl font-bold mb-2">Get a Custom Quote</h2>
+          <p className="text-gray-600 mb-6">
+            Please complete the requested fields and we'll be in touch within one business day to discuss options and pricing.
           </p>
-
-          <form className="space-y-6 text-left text-sm">
-            {/* Name */}
+          <form className="space-y-4">
             <div>
-              <h1 className="text-sm font-semibold mb-1">Name</h1>
-              <input
-                type="text"
-                placeholder="Enter your full name"
-                className="w-full border rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
+              <input type="text" id="name" placeholder="Enter your full name" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
-
-            {/* Email */}
             <div>
-              <h1 className="text-sm font-semibold mb-1">Email</h1>
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="w-full border rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+              <input type="email" id="email" placeholder="Enter your email address" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
-
-            {/* Phone */}
             <div>
-              <h1 className="text-sm font-semibold mb-1">Phone Number</h1>
-              <input
-                type="tel"
-                placeholder="Enter your phone number"
-                className="w-full border rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" />
             </div>
-
-            {/* Message */}
             <div>
-              <h1 className="text-sm font-semibold mb-1">Message</h1>
-              <textarea
-                placeholder="Tell us about your project requirements..."
-                className="w-full border rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                rows="3"
-              />
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
+              <textarea id="message" rows="4" placeholder="Tell us about your project requirements..." className="mt-1 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
             </div>
-
-            {/* Button */}
-            <button className="w-full bg-blue-600 text-white py-2 rounded-md font-semibold shadow hover:bg-blue-700 transition flex items-center justify-center gap-2 text-sm">
-              Submit Request <FaLongArrowAltRight />
+            <button type="submit" className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center justify-center">
+              Submit Request <FaArrowRight className="ml-2" />
             </button>
           </form>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

@@ -1,43 +1,36 @@
-import React, { useState, useEffect } from "react";
-import { FaReact } from "react-icons/fa";
+import React from 'react';
+import { SiReact } from 'react-icons/si';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${isScrolled ? "bg-white shadow-md py-3" : "bg-sky-100 py-3"}`}
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
-        {/* Logo + Text */}
-        <div className="flex items-center gap-2">
-          <FaReact className="text-blue-500 text-5xl animate-spin-slow" />
-          <div>
+    <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo and Brand Name */}
+        <div className="flex items-center">
+          <SiReact className="text-4xl text-blue-500 mr-2 animate-spin-slow" />
+          <div className="flex flex-col">
             <h1 className="text-xl font-bold">WebProDev</h1>
-            <p className="text-base text-gray-500">Hire Developer</p>
+            <p className="text-sm text-gray-500">Hire Developer</p>
           </div>
         </div>
 
-        {/* Navigation */}
-        <nav className="flex space-x-6 text-gray-700 font-medium">
-          <a href="#hire" className="hover:active text-blue-500">Hire Developers</a>
-          <a href="#about" className="hover:text-blue-500">About</a>
-          <a href="#blog" className="hover:text-blue-500">Blog</a>
-          <a href="#contact" className="hover:text-blue-500">Contact</a>
+        {/* NavBar */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <a href="#" className=" hover:active text-blue-500 transition-colors duration-300 font-semibold">Hire Developers</a>
+          <a href="#" className="text-gray-600 hover:text-blue-500 transition-colors duration-300 font-semibold">About</a>
+          <a href="#" className="text-gray-600 hover:text-blue-500 transition-colors duration-300 font-semibold">Blog</a>
+          <a href="#" className="text-gray-600 hover:text-blue-500 transition-colors duration-300 font-semibold">Contact</a>
+          <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+            START 7-DAYS TRAIL
+          </button>
         </nav>
 
-        {/* Button */}
-        <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition">
-          START 7-DAYS TRIAL
+        {/* Hamburger Menu for Mobile (optional, but good practice) */}
+        {/* You'd typically add a hamburger menu here for smaller screens */}
+        <button className="md:hidden text-gray-600">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
         </button>
       </div>
     </header>
