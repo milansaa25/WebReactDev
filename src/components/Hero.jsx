@@ -1,5 +1,5 @@
 import React from "react";
-import { FccGoogle , FaStar, FaArrowRight } from "react-icons/fa";
+import { FcGoogle , FaStar, FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
